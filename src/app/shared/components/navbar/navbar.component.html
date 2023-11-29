@@ -1,0 +1,30 @@
+
+
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sideNav (click)="sideNav.close()">
+        <mat-list>
+            <a mat-list-item [routerLink]="">
+                <mat-icon>
+                    dashboard
+                </mat-icon>Dashboard</a>
+            <a mat-list-item>
+                <mat-icon>
+                    note
+                </mat-icon>Beginners</a>
+            <a mat-list-item>
+                <mat-icon>
+                    books
+                </mat-icon>Advanced</a>
+        </mat-list>
+    </mat-sidenav>
+    <mat-toolbar color="accent">
+        <button mat-icon-button (click)="sideNav.open()">
+            <mat-icon>
+                menu
+            </mat-icon>
+        </button>
+    </mat-toolbar>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>
